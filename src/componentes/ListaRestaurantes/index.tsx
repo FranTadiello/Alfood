@@ -60,7 +60,7 @@ const ListaRestaurantes = () => {
         <input type="text" value={busca} onChange={evento => setBusca(evento.target.value)} />
       </div>
       <div>
-        <label htmlFor="select-ordenacao">Ordenar </label>
+        <label htmlFor="select-ordenacao">Ordenar por </label>
         <select
           name="select-ordenacao"
           id="select-ordenacao"
@@ -68,15 +68,15 @@ const ListaRestaurantes = () => {
           onChange={evento => setOrdenacao(evento.target.value)}
         >
           <option value="">Padrão</option>
-          <option value="id">Por ID</option>
-          <option value="nome">Por Nome</option>
+          <option value="id">ID</option>
+          <option value="nome">Nome</option>
         </select>
       </div>
       <div>
         <button type='submit'>Buscar</button>
       </div>
     </form>
-    
+
     {restaurantes?.map(item => <Restaurante restaurante={item} key={item.id} />)}
     {<button onClick={() => carregarDados(paginaAnterior)} disabled={!paginaAnterior}>
       Página Anterior

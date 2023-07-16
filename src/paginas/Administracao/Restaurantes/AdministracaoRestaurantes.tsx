@@ -22,12 +22,12 @@ const AdministracaoRestaurantes = () => {
                     </TableRow>
                 </TableHead>
                 <TableBody>
-                    {restaurantes.map(restaurante => 
-                    <TableRow key={restaurante.id}>
-                        <TableCell>
-                            {restaurante.nome}
-                        </TableCell>
-                    </TableRow>)}
+                    {restaurantes.map(restaurante =>
+                        <TableRow key={restaurante.id}>
+                            <TableCell>
+                                {restaurante.nome}
+                            </TableCell>
+                        </TableRow>)}
                 </TableBody>
             </Table>
         </TableContainer>
